@@ -1,0 +1,103 @@
+.detailsPage {
+  &__container {
+    padding-top: 23px;
+    width: 83%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    margin-right: 40px;
+    margin-bottom: 20px;
+  }
+
+  &__text-container {
+    margin-bottom: 26px;
+  }
+
+  &__title {
+    color: $main-color;
+    font-size: 16.5px;
+    margin-bottom: 15px;
+  }
+
+  &__details-list {
+    list-style: none;
+    margin-bottom: 32px;
+  }
+
+  &__details-item {
+    display: flex;
+  }
+
+  &__details {
+    padding-left: 15px;
+    width: 47.5%;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 13.2px;
+    min-height: 28px;
+    // top: 50%;
+    // transform: translateY(-50%);
+  }
+
+  &__details--green {
+    @extend .detailsPage__details;
+    background-color: $green-color;
+  }
+
+  &__details--left {
+    @extend .detailsPage__details;
+    padding-left: 0;
+    width: 52.5%;
+  }
+
+  &__about-title {
+    font-size: 16.5px;
+    color: $main-color;
+    margin-bottom: 12px;
+  }
+
+  &__description {
+    font-size: 14px;
+    color: $main-color-faded;
+    margin-bottom: 34px;
+  }
+
+  &__buttons-container {
+    display: flex;
+  }
+
+  &__button-container {
+    margin-right: 15px;
+    cursor: pointer;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__btn {
+    color: #372c48;
+  }
+
+  &__icon {
+    color: $font-awesome-green;
+  }
+}
+
+@media (min-width: 786px) {
+  .detailsPage {
+    &__container {
+      flex-direction: row;
+      width: 93.4%;
+      margin: 0 auto 30px;
+    }
+
+    &__img {
+      width: 37.6%;
+      margin: 0 22px 0 0;
+    }
+  }
+}

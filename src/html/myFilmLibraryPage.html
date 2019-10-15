@@ -1,0 +1,21 @@
+<section class="myFilmLibraryPage">
+  <div class="myFilmLibraryPage__button-container">
+    <button class="myFilmLibraryPage__button js-libraryWatchedBtn">
+      Watched
+    </button>
+    <button class="myFilmLibraryPage__button js-libraryQueueBtn">Queue</button>
+  </div>
+  <p class="main__hidden myFilmLibraryPage__no-items">There are no items to show</p>
+    <ul class="myFilmLibraryPage__filmList filmList js-libraryWatchedList">
+        <template id="libraryListTemplate">
+            {{#each this}}
+            <li data-id="{{id}}" class="myFilmLibraryPage__filmItem filmList__item">
+                <img width="500" class="myFilmLibraryPage__img filmList__img" src="https://image.tmdb.org/t/p/w500{{backdrop_path}}" alt="">
+                <p class="myFilmLibraryPage__movieName filmList__movieName">{{original_title}}</p>
+                <p class="myFilmLibraryPage__score">{{vote_average}}</p>
+            </li>
+            {{/each}}
+        </template>
+    </ul>
+    <ul class="myFilmLibraryPage__filmList filmList js-libraryQueueList"></ul>
+</section>

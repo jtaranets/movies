@@ -1,0 +1,46 @@
+.myFilmLibraryPage {
+  &__score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 48px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 26px;
+    height: 26px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 2.79px 0.21px rgba(0, 0, 0, 0.35),
+      inset 0px 0px 2.64px 1.36px rgba(0, 0, 0, 0.35);
+  }
+
+  &__no-items {
+    color: rgb(48, 43, 43);
+    font-size: 48px;
+    text-align: center;
+    font-weight: 900;
+  }
+
+  &__button-container {
+    background-color: rgb(243, 246, 246);
+    box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.23);
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    padding: 14px 36px;
+    font-family: $main-font;
+    border: none;
+    border-bottom: 2px solid #372c48;
+    background-color: inherit;
+    min-width: 140px;
+    margin: 13px 0;
+    
+
+    &:hover, &:focus {
+      background-color: $font-awesome-green;
+      color: #fff;
+      border: none
+    }
+  }
+}

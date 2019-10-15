@@ -1,0 +1,15 @@
+.footer {
+  background-color: $font-awesome-green;
+  padding: 36px 0 30px 0;
+  align-self: flex-end;
+  // bottom: 0px;
+  // left: 0px;
+  width: 100%;
+}
+
+.footer__creators {
+  text-align: center;
+  font-family: $main-font;
+  color: $main-color;
+  font-size: 16px;
+}
