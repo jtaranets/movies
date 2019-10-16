@@ -78,7 +78,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0)85%, rgb(0, 0, 0));
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 85%, rgb(0, 0, 0));
   z-index: 999;
 }
 
@@ -159,6 +159,17 @@ img {
 .homePage__back-text {
   color: $main-color;
 }
+
+.homePage__up-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: $font-awesome-green;
+  font-size: 30px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
 @media (min-width: 768px) {
   .filmList__item {
     width: 48%;
@@ -191,6 +202,12 @@ img {
 
   .homePage__error {
     font-size: 35px;
+  }
+
+  .homePage__up-btn {
+    bottom: 30px;
+    right: 50px;
+    font-size: 50px;
   }
 }
 @media (min-width: 1024px) {

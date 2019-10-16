@@ -13,6 +13,8 @@ var list = document.querySelector('.homePage__filmList');
 var popWhenError = document.querySelector('.homePage__error');
 var closeError = document.querySelector('.homePage__close-error-btn');
 var detailsPage = document.querySelector('.detailsPage');
+var upBtn = document.querySelector('.homePage__up-btn');
+var green = document.querySelector('.green');
 
 function fetchGenres() {
   fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=f1943ebda4bde31f3353b960641d381f&language=en-US').then(function (res) {
@@ -141,7 +143,24 @@ function initalBtnDisabling() {
   }
 }
 
+function showScroll() {
+  var currentHeight = window.scrollY;
+
+  var goUp = function goUp() {
+    window.scroll(0, 0);
+  };
+
+  upBtn.addEventListener('click', goUp); // console.log(window);
+
+  if (currentHeight > window.innerHeight) {
+    upBtn.classList.remove('main__hidden');
+  } else {
+    upBtn.classList.add('main__hidden');
+  }
+}
+
 window.onload = showHomePage;
+window.onscroll = showScroll;
 prevBtn.addEventListener('click', plaginationNavigation);
 nextBtn.addEventListener('click', plaginationNavigation);
 form.addEventListener('submit', searchFilms);

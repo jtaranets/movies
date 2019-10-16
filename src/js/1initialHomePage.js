@@ -13,6 +13,8 @@ const list = document.querySelector('.homePage__filmList');
 const popWhenError = document.querySelector('.homePage__error');
 const closeError = document.querySelector('.homePage__close-error-btn');
 const detailsPage = document.querySelector('.detailsPage');
+const upBtn = document.querySelector('.homePage__up-btn');
+const green = document.querySelector('.green');
 
 function fetchGenres() {
   fetch(
@@ -145,7 +147,23 @@ function initalBtnDisabling() {
   }
 }
 
+function showScroll(){
+  const currentHeight = window.scrollY;
+  const goUp = () => {
+    window.scroll(0, 0)
+  }
+  upBtn.addEventListener('click', goUp);
+  // console.log(window);
+  if(currentHeight > window.innerHeight){
+    upBtn.classList.remove('main__hidden');
+  }
+  else{
+    upBtn.classList.add('main__hidden')
+  }
+}
+
 window.onload = showHomePage;
+window.onscroll = showScroll;
 
 prevBtn.addEventListener('click', plaginationNavigation);
 nextBtn.addEventListener('click', plaginationNavigation);
