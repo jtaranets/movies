@@ -31,6 +31,8 @@ fetchGenres();
 function createCards(name, imgPath, year, movieId) {
   const item = document.createElement('li');
   item.classList.add('homePage__filmItem', 'filmList__item');
+  const shadow = document.createElement('div');
+  shadow.classList.add('filmList__shadow')
   const img = document.createElement('img');
   img.classList.add('homePage__img', 'filmList__img');
   img.setAttribute('src', `https://image.tmdb.org/t/p/w500${imgPath}`);
@@ -38,7 +40,7 @@ function createCards(name, imgPath, year, movieId) {
   movieName.classList.add('homePage__movieName', 'filmList__movieName');
   const res = getYearFromDate(year);
   movieName.textContent = `${name} (${res})`;
-  item.append(img, movieName);
+  item.append(img, shadow, movieName);
   item.addEventListener('click', () => activeDetailsPage(movieId, false));
   return item;
 }

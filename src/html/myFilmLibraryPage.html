@@ -13,6 +13,7 @@
             {{#each this}}
             <li data-id="{{id}}" class="myFilmLibraryPage__filmItem filmList__item">
                 <img width="500" class="myFilmLibraryPage__img filmList__img" src="https://image.tmdb.org/t/p/w500{{backdrop_path}}" alt="">
+                <div class="filmList__shadow"></div>
                 <p class="myFilmLibraryPage__movieName filmList__movieName">{{original_title}}</p>
                 <p class="myFilmLibraryPage__score">{{vote_average}}</p>
             </li>

@@ -30,6 +30,8 @@ fetchGenres();
 function createCards(name, imgPath, year, movieId) {
   var item = document.createElement('li');
   item.classList.add('homePage__filmItem', 'filmList__item');
+  var shadow = document.createElement('div');
+  shadow.classList.add('filmList__shadow');
   var img = document.createElement('img');
   img.classList.add('homePage__img', 'filmList__img');
   img.setAttribute('src', "https://image.tmdb.org/t/p/w500".concat(imgPath));
@@ -37,7 +39,7 @@ function createCards(name, imgPath, year, movieId) {
   movieName.classList.add('homePage__movieName', 'filmList__movieName');
   var res = getYearFromDate(year);
   movieName.textContent = "".concat(name, " (").concat(res, ")");
-  item.append(img, movieName);
+  item.append(img, shadow, movieName);
   item.addEventListener('click', function () {
     return activeDetailsPage(movieId, false);
   });
