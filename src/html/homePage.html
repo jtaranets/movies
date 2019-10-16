@@ -10,13 +10,15 @@
         class="homePage__input"
         placeholder="Write movie name and click Enter"
       />
-      <!-- <button type="submit">Submit</button> -->
     </div>
   </form>
-  <p class="homePage__error main__hidden">Your input is incorrect</p>
-  <button class="homePage__close-error-btn main__hidden">
-    Back to Home Page
-  </button>
+  <p class="homePage__error main__hidden">
+    Oops, your input seems to be incorrect
+  </p>
+  <div class="homePage__close-error-btn main__hidden">
+    <i class="fas fa-arrow-alt-circle-left homePage__back-icon"></i>
+    <p class="homePage__back-text"> Back to Home Page</p>
+  </div>
   <ul class="homePage__filmList filmList"></ul>
   <div class="homePage__buttons">
     <button class="homePage__Btn js-prev">Prev</button>

@@ -383,8 +383,7 @@ template {
 body {
   box-sizing: border-box;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  position: relative;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -465,6 +464,10 @@ img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.homePage__block {
+  min-height: calc(100vh - 74.93px - 83.76px);
 }
 
 .homePage__form {
@@ -614,13 +617,27 @@ img {
 
 .homePage__error {
   font-family: 'Roboto', sans-serif;
-  font-size: 50px;
+  font-size: 15px;
   font-weight: 900;
-  color: #f08080;
+  color: #372c48;
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.homePage__close-error-btn {
+  display: flex;
+  cursor: pointer;
+}
+
+.homePage__back-icon {
+  color: #77c1bb;
+}
+
+.homePage__back-text {
+  color: #372c48;
 }
 
 .detailsPage__container {
@@ -708,6 +725,10 @@ img {
   color: #77c1bb;
 }
 
+.myFilmLibraryPage {
+  min-height: calc(100vh - 74.93px - 83.76px);
+}
+
 .myFilmLibraryPage__score {
   position: absolute;
   top: 10px;
@@ -723,9 +744,13 @@ img {
 
 .myFilmLibraryPage__no-items {
   color: #302b2b;
-  font-size: 48px;
+  font-size: 15px;
   text-align: center;
   font-weight: 900;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
 }
 
 .myFilmLibraryPage__button-container {
@@ -755,7 +780,7 @@ img {
 .footer {
   background-color: #77c1bb;
   padding: 36px 0 30px 0;
-  align-self: flex-end;
+  left: 0px;
   width: 100%;
 }
 
@@ -826,6 +851,14 @@ img {
 
   .filmLsit__movieName {
     font-size: 14/5px;
+  }
+
+  .homePage__error {
+    font-size: 35px;
+  }
+
+  .myFilmLibraryPage__no-items {
+    font-size: 35px;
   }
 }
 

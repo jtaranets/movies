@@ -1,8 +1,9 @@
 body {
   box-sizing: border-box;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  // display: flex;
+  // flex-direction: column;
   // justify-content: space-between;
   user-select: none;
   font-family: $main-font;
