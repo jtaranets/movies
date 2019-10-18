@@ -136,14 +136,15 @@ function plaginationNavigation(e) {
   if (homePlaginationNumber.textContent === "1") {
     prevBtn.disabled = true;
   }
-  else{
-    prevBtn.disabled = false;
-  }
+  initalBtnDisabling()
 }
 
 function initalBtnDisabling() {
   if (homePlaginationNumber.textContent === '1') {
     prevBtn.disabled = true;
+  }
+  else{
+    prevBtn.disabled = false;
   }
 }
 

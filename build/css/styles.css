@@ -542,7 +542,7 @@ img {
 }
 
 .filmList__item {
-  width: 300px;
+  width: 100%;
   position: relative;
   margin-bottom: 10px;
   list-style: none;
@@ -563,7 +563,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0) 85%, black);
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 20%, black);
   z-index: 999;
 }
 
